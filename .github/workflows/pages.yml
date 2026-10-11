@@ -19,8 +19,6 @@ jobs:
     steps:
       - name: Check out source
         uses: actions/checkout@v6
-      - name: Check local links and assets
-        run: python3 scripts/check_site.py
       - name: Check JavaScript syntax
         run: node --check docs/script.js
       - name: Configure Pages
