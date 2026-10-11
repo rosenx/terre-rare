@@ -80,7 +80,41 @@ footer{border-top:1px solid var(--warm-line)}.footer-bottom{border-color:#705338
 h1,h2,h3,.hero h1,.product-info h3{font-family:var(--serif);font-weight:400;letter-spacing:normal}
 .long-form .lead-paragraph{font-family:var(--sans)}
 
+/* Batch lookup page — uses the same Athelas / Avenir editorial system. */
+.batch-lookup-layout{max-width:1320px;margin:0 auto;padding:44px 5% 78px;display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(42px,7vw,96px);align-items:center}
+.batch-lookup-visual{position:relative;margin:0;min-height:620px;background:#e8e1d8;overflow:hidden}
+.batch-lookup-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 52%}
+.batch-lookup-visual figcaption{position:absolute;left:22px;bottom:20px;color:#fff;font-size:11px;letter-spacing:.13em;text-transform:uppercase;text-shadow:0 1px 12px #0008}
+.batch-lookup-copy .eyebrow{color:#71604f;margin-bottom:22px}
+.batch-lookup-copy h1{font:400 clamp(45px,5vw,70px)/1.04 var(--serif);letter-spacing:-.025em;margin:0 0 16px}
+.batch-number-title{font:400 22px/1.3 var(--serif);margin-bottom:21px}
+.batch-lookup-copy .batch-intro{max-width:530px;font-size:15px;line-height:1.85;margin:0 0 28px}
+.batch-lookup-form{max-width:530px;display:flex;align-items:end;gap:12px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.batch-lookup-field{flex:1;display:grid;gap:7px;min-width:0}
+.batch-lookup-field label{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:#71604f}
+.batch-lookup-field input{width:100%;border:0;background:transparent;padding:5px 0;font:400 21px/1.3 var(--serif);color:var(--wood);outline:none}
+.batch-lookup-field input:focus-visible{outline:1px solid var(--wood);outline-offset:3px}
+.batch-lookup-form button{background:var(--wood);color:var(--white);font-size:13px;padding:13px 17px;white-space:nowrap}
+.batch-lookup-form button:hover{background:#4c3829}
+.batch-lookup-status{min-height:20px;margin:8px 0 0;font-size:12px;color:#71604f}
+.batch-record{max-width:530px;margin-top:16px;padding:20px 22px 19px;border:1px solid #29190e55;background:#faf9f6c9}
+.batch-record[hidden]{display:none!important}
+.batch-record-head{display:flex;justify-content:space-between;align-items:start;gap:15px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.batch-record-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#71604f;margin-bottom:6px}
+.batch-record-number{font:400 20px/1.3 var(--serif)}
+.batch-record-state{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#71604f;text-align:right}
+.batch-record h2{font:400 22px/1.25 var(--serif);margin:14px 0 3px}
+.batch-record-ingredient{font-size:13px;color:#71604f;margin-bottom:14px}
+.batch-record dl{display:grid;grid-template-columns:112px 1fr;gap:8px 14px;margin:0;font-size:13px;line-height:1.55}
+.batch-record dt{color:#71604f}.batch-record dd{margin:0}
+.batch-data-note{max-width:530px;margin:11px 0 0;font-size:11px;line-height:1.65;color:#71604f}
+.batch-return{max-width:1320px;margin:0 auto;padding:0 5% 30px;text-align:center}
+.batch-return a{display:inline-block;font-size:13px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+@media(max-width:900px){.batch-lookup-layout{grid-template-columns:1fr;gap:32px;padding-top:32px}.batch-lookup-visual{min-height:clamp(420px,70vw,650px)}.batch-lookup-copy{max-width:720px;margin:0 auto;width:100%}}
+@media(max-width:700px){.batch-lookup-layout{padding:26px 6% 52px;gap:25px}.batch-lookup-visual{min-height:460px}.batch-lookup-visual figcaption{left:16px;bottom:15px}.batch-lookup-copy .eyebrow{margin-bottom:17px}.batch-lookup-copy h1{font-size:46px}.batch-number-title{font-size:20px}.batch-lookup-copy .batch-intro{font-size:15px}.batch-lookup-form{gap:8px}.batch-lookup-form button{padding:12px 10px;font-size:12px}.batch-record{padding:17px 15px}.batch-record dl{grid-template-columns:92px 1fr;gap:7px 10px}.batch-return{padding:0 6% 24px}}
+
 /* Ingredient image follows the existing article column and caption spacing. */
 .long-form .article-figure{margin:0 0 35px}
 .long-form .article-figure img{display:block;width:100%;height:auto}
 .long-form .article-figure .image-caption{line-height:1.75}
+
