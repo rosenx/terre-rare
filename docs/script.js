@@ -4,7 +4,7 @@ toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expand
 mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!mobileNav.hidden){closeMenu();toggle.focus();}});
 window.matchMedia('(min-width:701px)').addEventListener('change',e=>{if(e.matches)closeMenu();});
-document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{const filter=button.dataset.filter;let count=0;document.querySelectorAll('.product').forEach(card=>{card.hidden=filter!=='all'&&card.dataset.category!==filter;if(!card.hidden)count++;});document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});document.getElementById('product-count').textContent=`${count} product${count===1?'':'s'}`;}));
+document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{const filter=button.dataset.filter;let count=0;document.querySelectorAll('.product').forEach(card=>{card.hidden=filter!=='all'&&card.dataset.category!==filter;if(!card.hidden)count++;});document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});document.getElementById('product-count').textContent=`${count} featured product${count===1?'':'s'}`;}));
 document.querySelectorAll('[data-product]').forEach(button=>button.addEventListener('click',()=>{const dialog=document.getElementById('product-'+button.dataset.product);dialog.showModal();document.body.classList.add('modal-open');}));
 document.querySelectorAll('dialog').forEach(dialog=>{dialog.querySelector('.close-dialog').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>document.body.classList.remove('modal-open'));dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});dialog.querySelector('.dialog-routine').addEventListener('click',()=>{dialog.close();document.getElementById('routine').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});});});
 document.querySelectorAll('[data-open]').forEach(a=>a.addEventListener('click',()=>{document.getElementById(a.dataset.open).open=true;}));
@@ -42,3 +42,4 @@ if(signature&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
  try{play=sessionStorage.getItem('terre-rare-signature')!=='seen';if(play)sessionStorage.setItem('terre-rare-signature','seen');}catch{}
  if(play)signature.classList.add('signature-animate');
 }
+
